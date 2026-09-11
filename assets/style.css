@@ -1,0 +1,238 @@
+/* MPMS, Inc. — www.mpmsinc.com
+   Single stylesheet, no build step, no external dependencies. */
+
+:root {
+  --bg:        #ffffff;
+  --bg-alt:    #f6f7f9;
+  --bg-note:   #eef4fb;
+  --border:    #dfe3e8;
+  --text:      #1d2330;
+  --text-mute: #5a6473;
+  --accent:    #1b4f8a;
+  --accent-dk: #123761;
+  --maxw:      44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #14181f;
+    --bg-alt:    #1b2029;
+    --bg-note:   #1a2430;
+    --border:    #2c333f;
+    --text:      #e6e9ee;
+    --text-mute: #a3acba;
+    --accent:    #6aa9e8;
+    --accent-dk: #9cc7f2;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+header.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand span { color: var(--accent); }
+
+nav.site {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  font-size: 0.9rem;
+}
+
+nav.site a {
+  color: var(--text-mute);
+  text-decoration: none;
+}
+
+nav.site a:hover,
+nav.site a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ---------- content ---------- */
+
+main { padding: 2.5rem 0 3rem; }
+
+h1 {
+  font-size: 1.85rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin: 2.2rem 0 0.6rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
+h1 + .lede {
+  color: var(--text-mute);
+  font-size: 1.05rem;
+  margin: 0 0 1.6rem;
+}
+
+p, ul, ol { margin: 0 0 1rem; }
+
+ul, ol { padding-left: 1.35rem; }
+
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); }
+
+a:hover { color: var(--accent-dk); }
+
+strong { font-weight: 650; }
+
+code, .kw {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+}
+
+.updated {
+  font-size: 0.88rem;
+  color: var(--text-mute);
+  margin: 0 0 2rem;
+}
+
+/* callout box — used for the required SMS disclosures */
+.note {
+  background: var(--bg-note);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+  margin: 0 0 1.4rem;
+}
+
+.note > :last-child { margin-bottom: 0; }
+
+.note h3 { margin-top: 0; }
+
+/* sample message bubbles */
+.sample {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.75rem 0.95rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* definition-style contact block */
+.facts {
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.6rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+
+.facts b {
+  flex: 0 0 9.5rem;
+  font-weight: 600;
+  color: var(--text-mute);
+  font-size: 0.9rem;
+}
+
+.facts span { flex: 1 1 14rem; }
+
+/* ---------- footer ---------- */
+
+footer.site {
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+  padding: 1.6rem 0;
+  font-size: 0.88rem;
+  color: var(--text-mute);
+}
+
+footer.site p { margin: 0 0 0.4rem; }
+
+footer.site p:last-child { margin-bottom: 0; }
+
+footer.site a { color: var(--text-mute); }
+
+footer.site a:hover { color: var(--accent); }
+
+.footlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 33rem) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.55rem; }
+  header.site .wrap { padding-top: 0.9rem; padding-bottom: 0.9rem; }
+  nav.site { margin-left: 0; width: 100%; gap: 0.9rem; }
+  .facts b { flex-basis: 100%; }
+}

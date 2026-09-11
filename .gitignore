@@ -1,0 +1,17 @@
+# This repo is PUBLIC. Everything committed is world-readable and stays in the
+# git history permanently, even if deleted in a later commit.
+#
+# The two files below stay local — they are not needed to serve the site, and
+# they contain internal infrastructure notes and business contact detail that
+# should not be published. Do not remove these lines.
+
+README.md
+fill-placeholders.ps1
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
