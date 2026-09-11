@@ -10,10 +10,12 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/">MPMS<span>,</span> Inc.</a>
-    <nav class="site">
+    <nav class="site" aria-label="Main">
       <a href="/">Home</a>
       <a href="/messaging/" aria-current="page">Messaging Terms</a>
       <a href="/privacy/">Privacy</a>
@@ -22,7 +24,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <div class="wrap">
 
   <h1>SMS Messaging Terms &amp; Conditions</h1>
@@ -141,12 +143,12 @@ texts from us. Reply START to resubscribe. Questions: (714) 238-1138</div>
 notifications. Msg &amp; data rates may apply. Msg frequency varies.
 Reply STOP to cancel. Help: (714) 238-1138 or epost@mpmsinc.com</div>
   <p>You can also reach our customer care team directly:</p>
-  <ul class="facts">
-    <li><b>Phone</b><span><a href="tel:+17142381138">(714) 238-1138</a></span></li>
-    <li><b>Email</b><span><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></span></li>
-    <li><b>Mail</b><span>MPMS, Inc.<br>1225 N. Grove St.<br>Anaheim, CA 92804</span></li>
-    <li><b>Hours</b><span>Monday - Friday, 8:00 AM - 5:00 PM Pacific</span></li>
-  </ul>
+  <dl class="facts">
+    <div><dt>Phone</dt><dd><a href="tel:+17142381138">(714) 238-1138</a></dd></div>
+    <div><dt>Email</dt><dd><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></dd></div>
+    <div><dt>Mail</dt><dd>MPMS, Inc.<br>1225 N. Grove St.<br>Anaheim, CA 92804</dd></div>
+    <div><dt>Hours</dt><dd>Monday - Friday, 8:00 AM - 5:00 PM Pacific</dd></div>
+  </dl>
 
   <h2>8. Eligibility and supported carriers</h2>
   <p>You must be at least 18 years old, and you must be the account holder of — or have
@@ -191,12 +193,12 @@ Reply STOP to cancel. Help: (714) 238-1138 or epost@mpmsinc.com</div>
 
 <footer class="site">
   <div class="wrap">
-    <div class="footlinks">
+    <nav class="footlinks" aria-label="Footer">
       <a href="/">Home</a>
       <a href="/messaging/">Messaging Terms</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms &amp; Conditions</a>
-    </div>
+    </nav>
     <p>&copy; 2026 MPMS, Inc. All rights reserved.</p>
     <p>1225 N. Grove St., Anaheim, CA 92804 &middot; (714) 238-1138 &middot;
        <a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></p>

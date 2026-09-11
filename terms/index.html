@@ -10,10 +10,12 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/">MPMS<span>,</span> Inc.</a>
-    <nav class="site">
+    <nav class="site" aria-label="Main">
       <a href="/">Home</a>
       <a href="/messaging/">Messaging Terms</a>
       <a href="/privacy/">Privacy</a>
@@ -22,7 +24,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <div class="wrap">
 
   <h1>Terms &amp; Conditions</h1>
@@ -146,24 +148,24 @@
   force. Our failure to enforce any provision is not a waiver of it.</p>
 
   <h2>15. Contact</h2>
-  <ul class="facts">
-    <li><b>Entity</b><span>MPMS, Inc.</span></li>
-    <li><b>Mail</b><span>1225 N. Grove St.<br>Anaheim, CA 92804</span></li>
-    <li><b>Email</b><span><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></span></li>
-    <li><b>Phone</b><span><a href="tel:+17142381138">(714) 238-1138</a></span></li>
-  </ul>
+  <dl class="facts">
+    <div><dt>Entity</dt><dd>MPMS, Inc.</dd></div>
+    <div><dt>Mail</dt><dd>1225 N. Grove St.<br>Anaheim, CA 92804</dd></div>
+    <div><dt>Email</dt><dd><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></dd></div>
+    <div><dt>Phone</dt><dd><a href="tel:+17142381138">(714) 238-1138</a></dd></div>
+  </dl>
 
 </div>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="footlinks">
+    <nav class="footlinks" aria-label="Footer">
       <a href="/">Home</a>
       <a href="/messaging/">Messaging Terms</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms &amp; Conditions</a>
-    </div>
+    </nav>
     <p>&copy; 2026 MPMS, Inc. All rights reserved.</p>
     <p>1225 N. Grove St., Anaheim, CA 92804 &middot; (714) 238-1138 &middot;
        <a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></p>

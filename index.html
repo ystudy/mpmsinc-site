@@ -10,10 +10,12 @@
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to main content</a>
+
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/">MPMS<span>,</span> Inc.</a>
-    <nav class="site">
+    <nav class="site" aria-label="Main">
       <a href="/" aria-current="page">Home</a>
       <a href="/messaging/">Messaging Terms</a>
       <a href="/privacy/">Privacy</a>
@@ -23,7 +25,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <div class="wrap">
 
   <h1>MPMS, Inc.</h1>
@@ -65,13 +67,13 @@
   </div>
 
   <h2 id="contact">Contact us</h2>
-  <ul class="facts">
-    <li><b>Legal entity</b><span>MPMS, Inc.</span></li>
-    <li><b>Mailing address</b><span>1225 N. Grove St.<br>Anaheim, CA 92804</span></li>
-    <li><b>Phone</b><span><a href="tel:+17142381138">(714) 238-1138</a></span></li>
-    <li><b>Email</b><span><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></span></li>
-    <li><b>Business hours</b><span>Monday - Friday, 8:00 AM - 5:00 PM Pacific</span></li>
-  </ul>
+  <dl class="facts">
+    <div><dt>Legal entity</dt><dd>MPMS, Inc.</dd></div>
+    <div><dt>Mailing address</dt><dd>1225 N. Grove St.<br>Anaheim, CA 92804</dd></div>
+    <div><dt>Phone</dt><dd><a href="tel:+17142381138">(714) 238-1138</a></dd></div>
+    <div><dt>Email</dt><dd><a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></dd></div>
+    <div><dt>Business hours</dt><dd>Monday - Friday, 8:00 AM - 5:00 PM Pacific</dd></div>
+  </dl>
 
   <p>For questions about text messages you have received from us, see the
   <a href="/messaging/">Messaging Terms</a> or reply <span class="kw">HELP</span> to any
@@ -82,12 +84,12 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="footlinks">
+    <nav class="footlinks" aria-label="Footer">
       <a href="/">Home</a>
       <a href="/messaging/">Messaging Terms</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms &amp; Conditions</a>
-    </div>
+    </nav>
     <p>&copy; 2026 MPMS, Inc. All rights reserved.</p>
     <p>1225 N. Grove St., Anaheim, CA 92804 &middot; (714) 238-1138 &middot;
        <a href="mailto:epost@mpmsinc.com">epost@mpmsinc.com</a></p>

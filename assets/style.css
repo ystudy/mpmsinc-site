@@ -28,6 +28,41 @@
 
 * { box-sizing: border-box; }
 
+/* ---------- accessibility ---------- */
+
+/* WCAG 2.4.1 Bypass Blocks: let keyboard and screen-reader users jump past the
+   nav that repeats on every page. Off-screen until focused, then visible. */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.7rem 1.1rem;
+  background: var(--bg);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip:focus {
+  left: 0;
+}
+
+/* WCAG 2.4.7 Focus Visible. The UA default is easy to lose against these
+   backgrounds, so state it explicitly and keep an offset so the ring is not
+   swallowed by an adjacent border. */
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* The skip target should not draw a ring simply because it was jumped to. */
+main:focus { outline: none; }
+
 html { -webkit-text-size-adjust: 100%; }
 
 body {
@@ -161,7 +196,13 @@ code, .kw {
 
 .note > :last-child { margin-bottom: 0; }
 
-.note h3 { margin-top: 0; }
+.note h2,
+.note h3 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  font-size: 1rem;
+}
 
 /* sample message bubbles */
 .sample {
@@ -177,30 +218,33 @@ code, .kw {
   overflow-wrap: anywhere;
 }
 
-/* definition-style contact block */
+/* Contact block: a description list, so the label/value pairing is exposed to
+   assistive tech rather than being a purely visual arrangement. */
 .facts {
   margin: 0 0 1.4rem;
   padding: 0;
-  list-style: none;
 }
 
-.facts li {
+.facts > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem 0.6rem;
   padding: 0.45rem 0;
   border-bottom: 1px solid var(--border);
-  margin: 0;
 }
 
-.facts b {
+.facts dt {
   flex: 0 0 9.5rem;
+  margin: 0;
   font-weight: 600;
   color: var(--text-mute);
   font-size: 0.9rem;
 }
 
-.facts span { flex: 1 1 14rem; }
+.facts dd {
+  flex: 1 1 14rem;
+  margin: 0;
+}
 
 /* ---------- footer ---------- */
 
@@ -234,5 +278,5 @@ footer.site a:hover { color: var(--accent); }
   h1 { font-size: 1.55rem; }
   header.site .wrap { padding-top: 0.9rem; padding-bottom: 0.9rem; }
   nav.site { margin-left: 0; width: 100%; gap: 0.9rem; }
-  .facts b { flex-basis: 100%; }
+  .facts dt { flex-basis: 100%; }
 }
